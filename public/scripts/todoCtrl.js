@@ -4,7 +4,7 @@
 	function todoController($scope, $http){
 		$scope.list= [];
 		$http.get("/resources/list.json").then(function(response){
-			console.log("succes ",response.data);
+			$scope.list= response.data;
 		}, 
 		function(response){
 			console.log(response);
