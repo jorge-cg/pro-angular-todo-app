@@ -30,7 +30,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr ng-repeat="item in list">
+				<tr ng-repeat="item in list | filter:{done:false}">
 					<td ng-bind="item.task"></td>
 					<td><input type="checkbox" ng-model="item.done" /></td>
 					<td>
