@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/jorge-cg/pro-angular-todo-app/issues"
   },
-  "homepage": "https://github.com/jorge-cg/pro-angular-todo-app#readme"
+  "homepage": "https://github.com/jorge-cg/pro-angular-todo-app#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
 }
