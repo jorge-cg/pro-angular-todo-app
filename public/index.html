@@ -35,17 +35,17 @@
 					<td ng-bind="item.task"></td>
 					<td><input type="checkbox" ng-model="item.done" /></td>
 					<td>
-						<button class="btn btn-primary btn-small">Edit</button>
+						<button class="btn btn-primary btn-small" ng-click="EditTask(item.task)">Edit</button>
 						<button class="btn btn-danger btn-small" ng-click="deleteTask()">Delete</button>
 					</td>
 				</tr>
 			</tbody>
 		</table>
-		<div class="input-group" ng-show="editing">
+		<div class="input-group" ng-show="editing!==null">
 			<input class="form-control"   ng-model="editTask" />
 			<span class="input-group-btn">
 				<button class="btn btn-default" ng-click="saveTask(editTask)">Save</button>
-				<button class="btn btn-default" ng-click="cancelEdit()">Cancel</button>
+				<button class="btn btn-default" ng-click="endEdit()">Cancel</button>
 			</span>
 		</div>
 	</div>

@@ -34,7 +34,23 @@
 		};
 		$scope.deleteTask= function(){
 			$scope.list.splice(this.$index,1);
-		}
+		};
+
+		$scope.EditTask= function(task){
+			$scope.editing= this.$index;
+			$scope.editTask= task;
+		};
+
+		$scope.saveTask= function(task){
+			if(task){	
+				$scope.list[$scope.editing].task= task;
+				$scope.endEdit();
+			}
+		};
+		$scope.endEdit= function(){
+			$scope.editing= null;
+			$scope.editTask= "";
+		};
 	}
 
 
