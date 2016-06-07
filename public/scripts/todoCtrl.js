@@ -32,6 +32,9 @@
 		$scope.clearTask= function(){
 			$scope.newTask= "";
 		};
+		$scope.deleteTask= function(){
+			$scope.list.splice(this.$index,1);
+		}
 	}
 
 
