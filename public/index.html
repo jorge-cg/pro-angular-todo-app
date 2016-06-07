@@ -22,25 +22,50 @@
 				<button class="btn btn-default" ng-click="clearTask()">Cancel</button>
 			</span>
 		</div>
-		<table class="table table-striped">
-			<thead>
-				<tr>
-					<th>Description</th>
-					<th>Done</th>
-					<th>Update</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr ng-repeat="item in list | filter:{done:false}">
-					<td ng-bind="item.task"></td>
-					<td><input type="checkbox" ng-model="item.done" /></td>
-					<td>
-						<button class="btn btn-primary btn-small" ng-click="EditTask(item.task)">Edit</button>
-						<button class="btn btn-danger btn-small" ng-click="deleteTask()">Delete</button>
-					</td>
-				</tr>
-			</tbody>
-		</table>
+		<div class="panel">
+			<h3 class="panel-heading">Incompleted</h3>
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>Description</th>
+						<th>Done</th>
+						<th>Update</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="item in list | filter:{done:false}">
+						<td ng-bind="item.task"></td>
+						<td><input type="checkbox" ng-model="item.done" /></td>
+						<td>
+							<button class="btn btn-primary btn-small" ng-click="EditTask(item.task)">Edit</button>
+							<button class="btn btn-danger btn-small" ng-click="deleteTask()">Delete</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="panel">
+			<h3 class="panel-heading">Completed</h3>
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>Description</th>
+						<th>Done</th>
+						<th>Update</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="item in list | filter:{done:true}">
+						<td ng-bind="item.task"></td>
+						<td><input type="checkbox" ng-model="item.done" /></td>
+						<td>
+							<button class="btn btn-primary btn-small" ng-click="EditTask(item.task)">Edit</button>
+							<button class="btn btn-danger btn-small" ng-click="deleteTask()">Delete</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 		<div class="input-group" ng-show="editing!==null">
 			<input class="form-control"   ng-model="editTask" />
 			<span class="input-group-btn">

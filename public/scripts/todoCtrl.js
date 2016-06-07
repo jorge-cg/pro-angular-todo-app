@@ -3,6 +3,7 @@
 
 	function todoController($scope, $http){
 		$scope.list= [];
+		$scope.editing= null;
 		$http.get("/resources/list.json").then(function(response){
 			$scope.list= response.data;
 		}, 
@@ -43,6 +44,7 @@
 
 		$scope.saveTask= function(task){
 			if(task){	
+				console.log($scope.list[$scope.editing]);
 				$scope.list[$scope.editing].task= task;
 				$scope.endEdit();
 			}
