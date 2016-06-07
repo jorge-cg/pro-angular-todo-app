@@ -9,6 +9,15 @@
 		function(response){
 			console.log(response);
 		});
+
+		$scope.incompleteCount = function () {
+			// console.log("count executed");
+			var count = 0;
+			angular.forEach($scope.list, function (item) {
+				if (!item.done) { count++ }
+			});
+			return count;
+		}
 	}
 
 
