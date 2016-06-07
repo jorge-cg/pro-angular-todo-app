@@ -25,9 +25,13 @@
 		$scope.addNewItem = function (actionText) {
 			if(actionText){	
 				$scope.list.push({ task: actionText, done: false });
-				$scope.newTask= "";
+				$scope.clearTask();
 			}
-		}
+		};
+
+		$scope.clearTask= function(){
+			$scope.newTask= "";
+		};
 	}
 
 
