@@ -17,6 +17,16 @@
 				if (!item.done) { count++ }
 			});
 			return count;
+		};
+		$scope.warningLevel = function () {
+			return $scope.incompleteCount() < 3 ? "label-success" : "label-warning";
+		}
+
+		$scope.addNewItem = function (actionText) {
+			if(actionText){	
+				$scope.list.push({ task: actionText, done: false });
+				$scope.newTask= "";
+			}
 		}
 	}
 
