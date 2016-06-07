@@ -1,6 +1,6 @@
- [
- { "task": "Buy Flowers", "done": false },
- { "task": "Get Shoes", "done": false },
- { "task": "Collect Tickets", "done": true },
- { "task": "Call Joe", "done": false }
- ]
+[
+{ "task": "Buy Flowers", "done": false },
+{ "task": "Get Shoes", "done": false },
+{ "task": "Collect Tickets", "done": true },
+{ "task": "Call Joe", "done": false }
+]
